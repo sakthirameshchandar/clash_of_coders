@@ -1,0 +1,123 @@
+:root {
+    --war-green: #2F4F2F;
+    --land-beige: #F5F0E6;
+    --terrain-brown: #8B5A2B;
+    --victory-gold: #D4AF37;
+    --alert-red: #B22222;
+    --text-dark: #2E2E2E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--land-beige);
+    color: var(--text-dark);
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+    background: var(--war-green);
+    color: white;
+    padding: 20px 60px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Hero */
+.hero {
+    background: var(--war-green);
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.cta-btn {
+    margin-top: 30px;
+    padding: 15px 30px;
+    background: var(--victory-gold);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.cta-btn:hover {
+    background: var(--alert-red);
+    transform: scale(1.1);
+    color: white;
+}
+
+/* Content Hidden Initially */
+.hidden {
+    display: none;
+}
+
+.content {
+    padding: 60px 100px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    margin: 40px 0 20px;
+    color: var(--war-green);
+}
+
+/* Cards */
+.card {
+    background: white;
+    border-left: 6px solid var(--terrain-brown);
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    transition: 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.highlight {
+    border-left: 6px solid var(--alert-red);
+}
+
+/* Final Button */
+.final-cta {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.enter-btn {
+    background: var(--victory-gold);
+    padding: 18px 50px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.enter-btn:hover {
+    background: var(--war-green);
+    color: white;
+    transform: scale(1.15);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
