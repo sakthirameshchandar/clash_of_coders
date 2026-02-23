@@ -1,14 +1,22 @@
-function showGuidelines() {
-    const section = document.getElementById("guidelines");
+const viewBtn = document.getElementById("viewBtn");
+const guidelines = document.getElementById("guidelinesSection");
 
-    section.classList.remove("hidden");
+viewBtn.addEventListener("click", () => {
+    guidelines.classList.remove("hidden");
+    guidelines.scrollIntoView({ behavior: "smooth" });
+});
 
-    section.scrollIntoView({
-        behavior: "smooth"
+/* Accordion */
+const accordions = document.querySelectorAll(".accordion");
+
+accordions.forEach(acc => {
+    acc.addEventListener("click", function() {
+        const panel = this.nextElementSibling;
+
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
     });
-}
-
-function enterContest() {
-    alert("🚀 Redirecting to Contest Registration...");
-    // window.location.href = "registration-link.html";
-}
+});
