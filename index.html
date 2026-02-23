@@ -3,70 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <title>Clash of Coders</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400&display=swap" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="style2.css">
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <h1>CLASH OF CODERS</h1>
-    </nav>
+<nav>
+    <div class="logo">CLASH OF CODERS</div>
+    <button class="register-btn">Register</button>
+</nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h2>Prepare Your Strategy.<br>Defend Your Territory.<br>Conquer the Coding World.</h2>
-        <p>Inter Department Technical Showdown - March Edition</p>
-        <button class="cta-btn" onclick="showGuidelines()">View Guidelines</button>
-    </section>
+<section class="hero">
+    <h1>ENTER THE CHAMPIONSHIP ARENA</h1>
+    <p>Only the best strategists survive.</p>
+    <button id="viewBtn" class="view-btn">View Guidelines</button>
+</section>
 
-    <!-- Hidden Guidelines Section -->
-    <section class="content hidden" id="guidelines">
-        
-        <h2 class="section-title">General Instructions</h2>
-        <ul class="card">
+<section class="guidelines hidden" id="guidelinesSection">
+
+    <h2 class="section-title">OFFICIAL CONTEST GUIDELINES</h2>
+
+    <!-- General Instructions -->
+    <div class="accordion">General Instructions</div>
+    <div class="panel">
+        <ul>
             <li>Active HackerRank account required.</li>
-            <li>Strict adherence to all rules.</li>
-            <li>AI tools prohibited.</li>
-            <li>Discussion only within team.</li>
+            <li>Strict rule adherence mandatory.</li>
+            <li>Violation leads to disqualification.</li>
+            <li class="highlight-red">AI tools strictly prohibited.</li>
             <li>Committee decisions are final.</li>
         </ul>
+    </div>
 
-        <h2 class="section-title">Round 0 – Codefront (Online)</h2>
-        <div class="card">
-            <p>• First-come, first-served entry.</p>
-            <p>• Maximum two lands per team.</p>
-            <p>• One member per land.</p>
-            <p>• Highest scorer conquers land.</p>
-            <p>• Strictly one land per team.</p>
-        </div>
+    <!-- Round 0 -->
+    <div class="accordion">Round 0 – Codefront (Online)</div>
+    <div class="panel">
+        <ul>
+            <li>First-Come First-Served entry.</li>
+            <li>Maximum two lands per team.</li>
+            <li>One member per land.</li>
+            <li class="highlight-gold">Each team conquers strictly one land.</li>
+        </ul>
+    </div>
 
-        <h2 class="section-title">Round 1 – Code Warfare (Offline)</h2>
-        <div class="card">
-            <h3>Attacking Phase</h3>
-            <p>• Conquer new lands.</p>
-            <p>• One member per attack.</p>
+    <!-- Round 1 -->
+    <div class="accordion">Round 1 – Code Warfare (Offline)</div>
+    <div class="panel">
+        <ul>
+            <li>Unconquered lands unlocked.</li>
+            <li>All four members defend conquered lands.</li>
+            <li>Top teams advance.</li>
+        </ul>
+    </div>
 
-            <h3>Defending Phase</h3>
-            <p>• Defend conquered lands.</p>
-            <p>• All 4 members can defend.</p>
-            <p>• Top teams advance.</p>
-        </div>
+    <!-- Round 2 -->
+    <div class="accordion">Round 2 – Final Conquest</div>
+    <div class="panel">
+        <ul>
+            <li>Details will be revealed soon…</li>
+        </ul>
+    </div>
 
-        <h2 class="section-title">Round 2 – Final Conquest</h2>
-        <div class="card highlight">
-            <p>Details to be revealed soon...</p>
-        </div>
+    <div class="tagline">
+        🔥 Prepare. Defend. Conquer.
+    </div>
 
-        <!-- Final Enter Button -->
-        <div class="final-cta">
-            <button class="enter-btn" onclick="enterContest()">ENTER CONTEST</button>
-        </div>
+    <button class="enter-btn">ENTER CONTEST</button>
 
-    </section>
+</section>
 
-    <script src="script.js"></script>
+<script src="script2.js"></script>
 </body>
 </html>
