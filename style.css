@@ -1,123 +1,179 @@
-:root {
-    --war-green: #2F4F2F;
-    --land-beige: #F5F0E6;
-    --terrain-brown: #8B5A2B;
-    --victory-gold: #D4AF37;
-    --alert-red: #B22222;
-    --text-dark: #2E2E2E;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body{
+    background:#111827;
+    color:#ffffff;
+    font-family:'Clash Display', sans-serif;
 }
 
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--land-beige);
-    color: var(--text-dark);
-    scroll-behavior: smooth;
+/* NAVBAR */
+nav{
+    background:#000000;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:2px solid #FFC451;
 }
 
-/* Navbar */
-.navbar {
-    background: var(--war-green);
-    color: white;
-    padding: 20px 60px;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
+.logo{
+    font-family:'Cinzel', serif;
+    font-size:24px;
+    color:#FFC451;
+    letter-spacing:2px;
 }
 
-/* Hero */
-.hero {
-    background: var(--war-green);
-    color: white;
-    text-align: center;
-    padding: 120px 20px;
+/* HERO */
+.hero{
+    text-align:center;
+    padding:150px 10%;
 }
 
-.hero h2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 38px;
-    margin-bottom: 20px;
+.hero h1{
+    font-family:'Cinzel', serif;
+    font-size:55px;
+    color:#FFC451;
+    text-shadow:0 0 20px rgba(255,196,81,0.7);
 }
 
-.cta-btn {
-    margin-top: 30px;
-    padding: 15px 30px;
-    background: var(--victory-gold);
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.4s ease;
+.hero p{
+    margin:20px 0;
+    font-size:20px;
 }
 
-.cta-btn:hover {
-    background: var(--alert-red);
-    transform: scale(1.1);
-    color: white;
+.view-btn{
+    background:#FFC451;
+    color:#000;
+    padding:15px 40px;
+    border:none;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
 }
 
-/* Content Hidden Initially */
-.hidden {
-    display: none;
+.view-btn:hover{
+    background:#DC2626;
+    color:#fff;
+    transform:scale(1.05);
 }
 
-.content {
-    padding: 60px 100px;
-    animation: fadeIn 1s ease-in-out;
+/* GUIDELINES */
+.guidelines{
+    padding:80px 8%;
+    opacity:1;
+    transition:all 0.6s ease;
 }
 
-.section-title {
-    font-family: 'Poppins', sans-serif;
-    margin: 40px 0 20px;
-    color: var(--war-green);
+.hidden{
+    display:none;
 }
 
-/* Cards */
-.card {
-    background: white;
-    border-left: 6px solid var(--terrain-brown);
-    padding: 25px;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    transition: 0.4s ease;
+.section-title{
+    text-align:center;
+    font-family:'Cinzel', serif;
+    font-size:42px;
+    color:#FFC451;
+    margin-bottom:50px;
 }
 
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+/* ACCORDION */
+.accordion{
+    background:#000000;
+    padding:20px;
+    margin-bottom:10px;
+    border-left:4px solid #FFC451;
+    font-family:'Cinzel', serif;
+    cursor:pointer;
+    transition:0.3s;
 }
 
-.highlight {
-    border-left: 6px solid var(--alert-red);
+.accordion:hover{
+    border-left:4px solid #DC2626;
 }
 
-/* Final Button */
-.final-cta {
-    text-align: center;
-    margin-top: 50px;
+.panel{
+    background:#1f2937;
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.4s ease;
+    padding:0 20px;
 }
 
-.enter-btn {
-    background: var(--victory-gold);
-    padding: 18px 50px;
-    border: none;
+.panel ul{
+    padding:20px 0;
+    list-style:none;
+}
+
+.panel ul li{
+    margin-bottom:12px;
+}
+
+.highlight-red{
+    color:#DC2626;
+    font-weight:bold;
+}
+
+.highlight-gold{
+    color:#FFC451;
+    font-weight:bold;
+}
+
+.tagline{
+    text-align:center;
+    margin-top:40px;
+    font-family:'Cinzel', serif;
+    font-size:22px;
+    color:#FFC451;
+}
+
+.enter-btn{
+    display:block;
+    margin:50px auto;
+    background:#FFC451;
+    color:#000;
+    padding:15px 50px;
+    border:none;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.enter-btn:hover{
+    background:#DC2626;
+    color:#fff;
+    transform:scale(1.05);
+}
+.register-btn {
+    font-family: 'Cinzel', serif;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    padding: 14px 36px;
+    border-radius: 8px;
+    border: 2px solid #FFC451;
+
+    background: linear-gradient(135deg, #DC2626, #111827);
+    color: #FFFFFF;
+
     cursor: pointer;
-    transition: 0.4s ease;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 15px rgba(255, 196, 81, 0.4);
 }
 
-.enter-btn:hover {
-    background: var(--war-green);
-    color: white;
-    transform: scale(1.15);
+/* Hover Effect */
+.register-btn:hover {
+    background: linear-gradient(135deg, #FFC451, #DC2626);
+    color: #000000;
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(255, 196, 81, 0.8);
 }
 
-/* Animation */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(40px); }
-    to { opacity: 1; transform: translateY(0); }
+/* Click Effect */
+.register-btn:active {
+    transform: scale(0.95);
 }
